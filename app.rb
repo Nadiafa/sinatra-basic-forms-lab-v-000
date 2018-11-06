@@ -11,15 +11,10 @@ class App < Sinatra::Base
   end
   
   post '/display' do
-    erb :display_puppy
-  end
-
-end
-
-
-  post '/puppy' do
     @name = params['name']
     @age = params['age']
     @breed = params['breed']
     erb :display_puppy
   end
+
+end
